@@ -1,0 +1,321 @@
+/* De onderlijnen van alle links verwijderen*/
+html {
+    font-family: "OpenSans", serif;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+body {
+    color: #f8edec;
+    background-color: #f8edec;
+    display: flex;
+    justify-content: center;
+}
+
+a:visited,
+a:link,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #f8edec;
+}
+
+figcaption {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
+
+img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: auto;
+    border: none;
+}
+
+/*De hoofd-GRID van de website*/
+
+.container {
+    height: 100%;
+    font-size: 85%;
+    border: none;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2em 1.2em 1fr 1fr fit-content(40%) fit-content(40%) 60px 60px 50px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "a a a a a a a a a a a a"
+        "a a a a a a a a a a a a"
+        "a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2"
+        "a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2"
+        "f f f f f f f f f f f f";
+}
+
+/* De basis-layout van de pagina. De classes heb ik de namen 'level1', 'level2' etc.
+meegegeven. De eerste level is het basis-raamwerk van de pagina, 
+zoals hierboven te zien is. Een 2e of later level betekent dat het een dochter
+of klein-dochter van de originele container is.*/
+
+.header-level1 {
+    grid-area: h;
+    background-color: #206ad8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-level1 {
+    grid-area: n;
+    background-color: #206ad8;
+
+    height: fit-content;
+}
+
+.main-level1 {
+    grid-area: m;
+    background-color: #f28ce8;
+}
+
+.aside-level1 {
+    grid-area: a;
+    background-color: #7e71e4;
+    border: 0px solid #206ad8;
+    margin: 0px;
+    padding: 1em;
+    border-radius: 2px;
+}
+
+.aside2-level1 {
+    grid-area: a2;
+    background-color: #7e71e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.footer-level1 {
+    grid-area: f;
+    background-color: #206ad8;
+}
+
+/* Level 2 */
+
+.aside-level2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aside2.level2 {
+    display: flex;
+    flex-direction: column;
+}
+/* Styles voor content en items */
+
+.header-text-logo {
+    font-size: 1em;
+}
+
+.nav-list {
+    display: flex;
+    border: 1px solid #7e71e4;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-left: 0px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.main-article {
+    padding: 1em;
+    border: none;
+    justify-content: space-evenly;
+    align-items: baseline;
+    text-align: center;
+}
+
+.contact-label {
+    text-align: left;
+}
+
+h2.main-article {
+    text-align: center;
+}
+
+img.main-image {
+    width: 100%;
+}
+
+.aside-title-bold {
+    font-weight: bolder;
+}
+
+.aside-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.aside-text {
+    text-align: center;
+}
+
+.internal-links {
+}
+
+.image {
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 50px;
+    max-width: 200px;
+}
+
+.image-size-props {
+    width: 100%;
+    margin: 0 auto;
+}
+
+label.name-person {
+    font-weight: 900;
+}
+
+#django-quote {
+    display: flex;
+    flex-direction: column;
+    line-height: 140%;
+    font-size: 120%;
+    text-align: center;
+    font-style: italic;
+}
+
+#django-quote-subscript {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    font-size: 70%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.8em;
+}
+
+#sign-up-link {
+    text-decoration: underline;
+}
+
+#coupon {
+    border: 0.33em dashed rgb(255, 217, 0);
+    border-radius: 4px;
+    padding: 0.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#contact-form-grid {
+    display: -ms-inline-grid;
+    border: none;
+    width: auto;
+    margin: 0 auto;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: fit-content;
+    margin-bottom: 2em;
+    line-height: 1.7em;
+    grid-template-areas: none;
+}
+
+#content-form-centering {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#submit {
+    margin: auto;
+    margin-top: 2em;
+}
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 320px) {
+    .container {
+        height: 100%;
+        max-width: 1024px;
+        font-size: 90%;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(12, 1fr);
+        /*grid-template-rows: 2em 1.2em 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+        grid-template-rows: 2em 1.2em 1fr 1fr 10em 30em 60px 60px 50px;
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "n n n n n n n n n n n n"
+            "m m m m m m m m m a a a"
+            "m m m m m m m m m a a a"
+            "m m m m m m m m m a a a"
+            "m m m m m m m m m a2 a2 a2"
+            "m m m m m m m m m a2 a2 a2"
+            "m m m m m m m m m a2 a2 a2"
+            "f f f f f f f f f f f f";
+    }
+
+    .main-article {
+        flex-direction: row;
+    }
+
+    .contact-form-width {
+        min-width: 45%;
+    }
+
+    img.main-image {
+        min-width: 200px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-rows: 4em 1.4em 1fr 1fr 10em 30em 60px 60px 50px;
+    }
+
+    .main-article {
+        padding: 3em;
+    }
+
+    img.main-image {
+        min-width: 350px;
+    }
+
+    .header-text-logo {
+        font-size: 2.5em;
+    }
+}
